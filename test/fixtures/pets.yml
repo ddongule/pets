@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  age: MyString
+  careName: MyString
+  color: MyString
+  image: MyString
+  happenDate: 
+  happenPlace: MyText
+  kind: MyString
+  neuter: MyString
+  orgName: MyString
+  processState: MyString
+
+two:
+  age: MyString
+  careName: MyString
+  color: MyString
+  image: MyString
+  happenDate: 
+  happenPlace: MyText
+  kind: MyString
+  neuter: MyString
+  orgName: MyString
+  processState: MyString

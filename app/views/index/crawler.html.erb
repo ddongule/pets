@@ -1,0 +1,44 @@
+​
+<h1>버려진 동물들 정보</h1>
+<table>
+  <thead>
+    <tr>
+      <th>접수일</th>
+      <th>발견장소</th>
+      <th>품종</th>
+      <th>색상</th>
+      <th>나이</th>
+      <%# <th>체중: <%=@results.res_cnt%>
+      <th>사진</th>
+      <th>상태</th>
+      <th>성별</th>
+      <th>중성화</th>
+      <th>특징</th>
+      <th>보호소이름</th>
+      <th>보호장소</th>
+      <%# <%=@result %> %>
+      <%# <%=@response.body %> %>
+<%=@age%>
+    </tr>
+    <tr>
+      <th>Bank</th>
+      <th>Banknum</th>
+      <th colspan="3"></th>
+   </tr>
+  </thead>
+  <%=@response%>
+  <hr>
+  ​<%=@result%>
+  <hr>
+  ​<%=@results%>
+  <hr>
+  <tbody>
+    <%# @results.each do |bank| %>
+      <tr>
+        <td><%= @results.fetch("response").fetch("body").fetch("items").fetch("item") %></td>
+        <td></td>
+      </tr>
+    <%# end %>
+  </tbody>
+</table>
+​
