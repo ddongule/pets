@@ -1,48 +1,21 @@
-​
-<h1>버려진 동물들 정보</h1>
-<table>
-  <thead>
-    <tr>
-      <th>발견장소</th>
-      <th>품종</th>
-      <th>색상</th>
-      <th>나이</th>
-      <th>사진</th>
-      <th>무게</th>
-      <th>상태</th>
-      <th>성별</th>
-      <th>중성화</th>
-      <th>특징</th>
-      <th>보호소이름</th>
-      <th>보호장소</th>
-      <%# <%=@response.body %>
-    </tr>
-  </thead>
-  <%# <%=@response%>
-  <%#@item.each do |age|%> 
-  <%#= age["age"]%>
-  <%# end %>
-  <%# ​<%=@item.second%>
-  <%#=@result %>
-  <%# ​<%=@results%>
-  <tbody>
-    <% @item.each do |item| %>
-      <tr>
-        <td><%= item["happenDT"]%></td>
-        <td><%= item["happenPlace"]%></td>
-        <td><%= item["kindCd"]%></td>
-        <td><%= item["색상"]%></td>
-        <td><%= item["age"]%></td>
-        <td><%= item["popfile"]%></td>
-        <td><%= item["weight"]%></td>
-        <td><%= item["processState"]%></td>
-        <td><%= item["sexCd"]%></td>
-        <td><%= item["neuterYn"]%></td>
-        <td><%= item["specialMark"]%></td>
-        <td><%= item["careNm"]%></td>
-        <td><%= item["careAddr"]%></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-​
+<h1>보호 중 동물</h1>
+
+<%@pr.each do |p|%>
+  <br>
+  종류 : <%= p.kind%>  <br>
+  색상 : <%= p.color%> <br>
+  성별 : <%= p.sex%> <br>
+  나이 / 체중 : <%= p.age_weight%> <br>
+  발생 장소 :<%= p.happenPlace%> <br>
+  접수 일시 : <%= p.happenDate%> <br>
+  중성화 여부 : <%= p.neuter%> <br>
+  특징 : <%= p.character%> <br>
+  등록 번호 : <%= p.dog_number%> <br>
+  관할 기관 : <%= p.orgName%> <br>
+  상태 : <%= p.processState%> <br>
+  보호 센터 : <%= p.careName%> <br>
+  보호 센터 연락처 :<%= p.careNumber%> <br>
+  보호 장소 : <%= p.carePlace%> <br>
+<%end%>
+
+  <a href="index/crawler.csv">export all<a>

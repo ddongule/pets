@@ -16,18 +16,21 @@ ActiveRecord::Schema.define(version: 20180907081849) do
   enable_extension "plpgsql"
 
   create_table "pets", force: :cascade do |t|
-    t.string "age"
-    t.string "careName"
-    t.string "color"
-    t.string "image"
-    t.integer "happenDate"
-    t.text "happenPlace"
     t.string "kind"
+    t.string "color"
+    t.string "sex"
+    t.string "age_weight"
+    t.string "happenPlace"
+    t.string "happenDate"
     t.string "neuter"
+    t.text "character"
+    t.string "dog_number"
     t.string "orgName"
     t.string "processState"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string "careName"
+    t.string "careNumber"
+    t.string "carePlace"
+    t.string "image"
   end
 
 end
