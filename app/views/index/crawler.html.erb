@@ -3,42 +3,46 @@
 <table>
   <thead>
     <tr>
-      <th>접수일</th>
       <th>발견장소</th>
       <th>품종</th>
       <th>색상</th>
       <th>나이</th>
-      <%# <th>체중: <%=@results.res_cnt%>
       <th>사진</th>
+      <th>무게</th>
       <th>상태</th>
       <th>성별</th>
       <th>중성화</th>
       <th>특징</th>
       <th>보호소이름</th>
       <th>보호장소</th>
-      <%# <%=@result %> %>
-      <%# <%=@response.body %> %>
-<%=@age%>
+      <%# <%=@response.body %>
     </tr>
-    <tr>
-      <th>Bank</th>
-      <th>Banknum</th>
-      <th colspan="3"></th>
-   </tr>
   </thead>
-  <%=@response%>
-  <hr>
-  ​<%=@result%>
-  <hr>
-  ​<%=@results%>
-  <hr>
+  <%# <%=@response%>
+  <%#@item.each do |age|%> 
+  <%#= age["age"]%>
+  <%# end %>
+  <%# ​<%=@item.second%>
+  <%#=@result %>
+  <%# ​<%=@results%>
   <tbody>
-    <%# @results.each do |bank| %>
+    <% @item.each do |item| %>
       <tr>
-        <td><%= @results.fetch("response").fetch("body").fetch("items").fetch("item") %></td>
-        <td></td>
+        <td><%= item["happenDT"]%></td>
+        <td><%= item["happenPlace"]%></td>
+        <td><%= item["kindCd"]%></td>
+        <td><%= item["색상"]%></td>
+        <td><%= item["age"]%></td>
+        <td><%= item["popfile"]%></td>
+        <td><%= item["weight"]%></td>
+        <td><%= item["processState"]%></td>
+        <td><%= item["sexCd"]%></td>
+        <td><%= item["neuterYn"]%></td>
+        <td><%= item["specialMark"]%></td>
+        <td><%= item["careNm"]%></td>
+        <td><%= item["careAddr"]%></td>
       </tr>
-    <%# end %>
+    <% end %>
   </tbody>
 </table>
 ​

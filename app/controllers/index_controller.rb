@@ -28,15 +28,14 @@ class IndexController < ApplicationController
                     'neuter_yn' => 'Y' 
                   }
                 )
-    @result = Hash.from_xml(@response).to_json
-    @results = JSON.parse(@result)
+    @result = Hash.from_xml(@response)
+    # @results = JSON.parse(@result)
     
-    @item = @results.fetch("response").fetch("body").fetch("items").fetch("item")
+    @item = @result.fetch("response").fetch("body").fetch("items").fetch("item")
     # @age = @results[:response][:body][:items][:item][:age]
     puts @response
     puts @result
-    puts @results
-    puts @age
+    puts @item
   end
 
 end
