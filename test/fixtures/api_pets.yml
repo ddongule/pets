@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  image: MyString
+  happenDt: MyString
+  happenPlace: MyString
+  kindCd: MyString
+  colorCd: MyString
+  age: MyString
+  weight: MyString
+  processState: MyString
+  sexCd: MyString
+  neuterYn: MyString
+  specialMark: MyString
+  careNm: MyString
+  careAddr: MyString
+
+two:
+  image: MyString
+  happenDt: MyString
+  happenPlace: MyString
+  kindCd: MyString
+  colorCd: MyString
+  age: MyString
+  weight: MyString
+  processState: MyString
+  sexCd: MyString
+  neuterYn: MyString
+  specialMark: MyString
+  careNm: MyString
+  careAddr: MyString

@@ -6,7 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 gem 'mechanize'
-
+gem 'rails-assets-datatables', source: 'https://rails-assets.org'
+gem 'rails-assets-jquery', source: 'https://rails-assets.org'
 gem 'rest-client'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.6'

@@ -1,0 +1,2 @@
+class ApiPet < ApplicationRecord
+end

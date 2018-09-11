@@ -1,0 +1,47 @@
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.row {
+  float:left;
+  width: 30.333%;
+  margin: 10px;
+}
+
+.column {
+  float: left;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-box {
+  padding: 10px;
+  text-align: center;
+  height: 400px;
+}
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}

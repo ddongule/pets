@@ -1,0 +1,44 @@
+​
+<div class="container">
+  <h1>버려진 동물들 정보</h1><br><br>
+    <% @item.each do |item| %>
+      <div class="row" role='datatable'>
+        <div class="column">
+          <div class="card">
+            <%= image_tag ("#{item["popfile"]}"), :class => "image-size" %>
+            <div class="card-box">
+              <%# <h2> dididi </h2> %>
+                <p class="title"><%= item["happenDt"]%></p><br>
+                <p class="title"><%= item["happenPlace"]%></p>
+                <p class="title"><%= item["kindCd"]%></p>
+                <p class="title"><%= item["colorCd"]%></p>
+                <p class="title"><%= item["age"]%></p>
+
+                <p class="title"><%= item["weight"]%></p>
+                <p class="title"><%= item["processState"]%></p>
+                <p class="title"><%= item["sexCd"]%></p>
+                <p class="title"><%= item["neuterYn"]%></p>
+                <p class="title"><%= item["careNm"]%></p>
+                <p class="title"><%= item["careAddr"]%></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+</div>
+
+
+<%#= item["happenDt"]%>
+<%#= item["happenPlace"]%>
+<%#= item["kindCd"]%>
+<%#= item["colorCd"]%>
+<%#= item["age"]%>
+
+<%#= item["weight"]%>
+<%#= item["processState"]%>
+<%#= item["sexCd"]%>
+<%#= item["neuterYn"]%>
+<%#= item["careNm"]%>
+<%#= item["careAddr"]%>
+
+

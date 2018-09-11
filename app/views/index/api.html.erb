@@ -1,48 +1,55 @@
 ​
-<h1>버려진 동물들 정보</h1>
-<table>
-  <thead>
-    <tr>
-      <th>발견장소</th>
-      <th>품종</th>
-      <th>색상</th>
-      <th>나이</th>
-      <th>사진</th>
-      <th>무게</th>
-      <th>상태</th>
-      <th>성별</th>
-      <th>중성화</th>
-      <th>특징</th>
-      <th>보호소이름</th>
-      <th>보호장소</th>
-      <%# <%=@response.body %>
-    </tr>
-  </thead>
-  <%# <%=@response%>
-  <%#@item.each do |age|%> 
-  <%#= age["age"]%>
-  <%# end %>
-  <%# ​<%=@item.second%>
-  <%#=@result %>
-  <%# ​<%=@results%>
-  <tbody>
-    <% @item.each do |item| %>
-      <tr>
-        <td><%= item["happenDT"]%></td>
-        <td><%= item["happenPlace"]%></td>
-        <td><%= item["kindCd"]%></td>
-        <td><%= item["색상"]%></td>
-        <td><%= item["age"]%></td>
-        <td><%= item["popfile"]%></td>
-        <td><%= item["weight"]%></td>
-        <td><%= item["processState"]%></td>
-        <td><%= item["sexCd"]%></td>
-        <td><%= item["neuterYn"]%></td>
-        <td><%= item["specialMark"]%></td>
-        <td><%= item["careNm"]%></td>
-        <td><%= item["careAddr"]%></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-​
+<div class="container">
+  <h1>버려진 동물들 정보</h1>
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th>발견일시</th>
+          <th>발견장소</th>
+          <th>품종</th>
+          <th>색상</th>
+          <th>나이</th>
+          <th>사진</th>
+          <th>무게</th>
+          <th>상태</th>
+          <th>성별</th>
+          <th>중성화</th>
+          <th>특징</th>
+          <th>보호소이름</th>
+          <th>보호장소</th>
+          <%# <%=@response.body %>
+        </tr>
+      </thead>
+      <%# <%=@response%>
+      <%#@item.each do |age|%> 
+      <%#= age["age"]%>
+      <%# end %>
+      <%# ​<%=@item.second%>
+      <%#=@result %>
+    <%# <br><hr>
+    <%=@headers%>
+      <%# ​<%=@response%>
+
+      <tbody>
+        <% @item.each do |item| %>
+          <tr>
+            <td><%= item["happenDt"]%></td>
+            <td><%= item["happenPlace"]%></td>
+            <td><%= item["kindCd"]%></td>
+            <td><%= item["colorCd"]%></td>
+            <td><%= item["age"]%></td>
+            <td><%= image_tag ("#{item["popfile"]}"), :class => "image-size" %></td>
+            <td><%= item["weight"]%></td>
+            <td><%= item["processState"]%></td>
+            <td><%= item["sexCd"]%></td>
+            <td><%= item["neuterYn"]%></td>
+            <td><%= item["specialMark"]%></td>
+            <td><%= item["careNm"]%></td>
+            <td><%= item["careAddr"]%></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+</div>
+
+
