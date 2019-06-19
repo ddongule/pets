@@ -1,24 +1,6 @@
-# README
+# 전국 유기견 정보 가져오기
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- 전국 유기견 정보 크롤링(시도)
+- 전국 유기견 정보 api를 이용한 유기견 정보 알려주는 사이트 만들기
+- 유기견 정보(사진, 종류, 색깔, 성별, 시간, 장소 등)를 표로 만들어 보여주기
+- csv로 추출
