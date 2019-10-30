@@ -8,9 +8,10 @@ require 'csv'
 
 class IndexController < ApplicationController
   def image_api
-    begin_date = "20180801"
-    end_date = "20180910"
-    numberOfRows = "1000"
+    ago = Time.now - 6.months
+    begin_date = ago.strftime("%Y%m%d")
+    end_date = Time.now.strftime("%Y%m%d")
+    numberOfRows = "500"
     upkind = "417000"
     url = 'http://openapi.animal.go.kr/openapi/service/rest/abandonmentPublicSrvc/abandonmentPublic?serviceKey=xGlQTeuJgMXQ6MuW6u00yGB%2B5L5CSFVh1DDrGI4eMq8vKhQpilRPIrDK9%2F3HY26ufoks4n%2Bdv0B7FqkPigJcSQ%3D%3D&bgnde='+ String(begin_date)+'&endde='+String(end_date)+'&numOfRows='+String(numberOfRows)+'&upkind='+String(upkind)
     @response = RestClient::Request.execute(
@@ -18,15 +19,17 @@ class IndexController < ApplicationController
                   :url => url)
 
     @result = Hash.from_xml(@response)
-  
+    
 
 
     @item = @result.fetch("response").fetch("body").fetch("items").fetch("item")
-    
-    puts @headers
-    puts @response
-    puts @result
-    puts @item
+
+    puts end_date 
+    puts begin_date
+    # puts @headers
+    # puts @response
+    # puts @result
+    # puts @item
 
   end
 
